@@ -28,7 +28,7 @@ def summarize_text(text):
     response = client.chat.completions.create(
       messages=[
           {"role": "system", "content": "You are a helpful assistant that summarizes text content extracted from a website."},
-            {"role": "user", "content": f"Summarize the website content in no more than 200 words: ```{text}```"}
+            {"role": "user", "content": f"Summarize the website content below, delimited by triple backticks in at most 200 words. Content: ```{text}```"}
       ],
       model=MODEL,
       temperature=0,
