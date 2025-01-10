@@ -45,9 +45,7 @@ A Python-based tool that retrieves the content of a specified website and genera
    pip install -r requirements.txt
    ```
 
-4. **Set Up OpenAI API Key**
-
-   - Create a `.env` file in the project directory and add your OpenAI API key:
+4. **Create a `.env` file in the project directory and add your OpenAI API key**
 
    ```bash
    echo "OPENAI_API_KEY=your_openai_api_key" > .env
