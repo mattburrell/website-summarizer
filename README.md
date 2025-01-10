@@ -7,7 +7,7 @@ A Python-based tool that retrieves the content of a specified website and genera
 ## Features
 
 - Fetches and extracts text from any website URL.
-- Summarizes the content using OpenAI's GPT-3.5-turbo model.
+- Summarizes the content using OpenAI's gpt-4o-mini model.
 - Lightweight and easy to use.
 - Customizable to focus on specific content (e.g., articles, blog posts).
 
@@ -50,11 +50,7 @@ A Python-based tool that retrieves the content of a specified website and genera
    - Create a `.env` file in the project directory and add your OpenAI API key:
 
    ```bash
-   touch .env
-   ```
-
-   ```plaintext
-   OPENAI_API_KEY=your_openai_api_key
+   echo "OPENAI_API_KEY=your_openai_api_key" > .env
    ```
 
 5. **Run the Script**
