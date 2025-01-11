@@ -25,10 +25,17 @@ def fetch_website_content(url):
 
 def summarize_text(text):
     """Uses OpenAI API to summarize the given text."""
+    prompt =f"""
+    Perform the following analyses on the website content provided within the triple backticks:
+    Main Topic: Identify the main topic of the content and respond with a single word.
+    Summary: Summarize the content in 200 words or fewer, focusing on key points and purpose.
+    Sentiment: Determine the sentiment of the content and respond with either 'positive' or 'negative'.
+    Content: ```{text}```
+    """
     response = client.chat.completions.create(
       messages=[
           {"role": "system", "content": "You are a helpful assistant that summarizes text content extracted from a website."},
-            {"role": "user", "content": f"Summarize the website content below, delimited by triple backticks in at most 200 words. Content: ```{text}```"}
+            {"role": "user", "content": prompt},
       ],
       model=MODEL,
       temperature=0,
